@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTwin Prototype</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light">
+
+    <div class="alert alert-secondary text-center small py-2 mb-0" style="border-radius: 0; background: #1a1a1a; border-bottom: 1px solid #333; color: #aaa;">
+        <strong>Notice:</strong> This is a productivity research tool for habit awareness. 
+        It does not provide medical, psychological, or health advice. 
+        <span class="text-info">Consult a licensed professional for health concerns.</span>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">TIMETWIN <span class="text-info">PROTOTYPE</span></a>
+            <div class="navbar-nav">
+                <a class="nav-link active" data-page="dashboard" href="#">User Dashboard</a>
+                <a class="nav-link" data-page="lab" href="#">Pattern Lab</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <div id="page-dashboard" class="view-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 id="current-day-display">Select a Day</h5>
+                    <div class="calendar-grid d-flex gap-2 mb-4">
+                        <div class="clickable-day p-2 border rounded text-center" data-day="Monday">M</div>
+                        <div class="clickable-day p-2 border rounded text-center" data-day="Tuesday">T</div>
+                        <div class="clickable-day p-2 border rounded text-center" data-day="Wednesday">W</div>
+                        <div class="clickable-day p-2 border rounded text-center" data-day="Thursday">T</div>
+                        <div class="clickable-day p-2 border rounded text-center" data-day="Friday">F</div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-6">
+                            <h6>Actual Routine</h6>
+                            <div id="actual-content"></div>
+                        </div>
+                        <div class="col-6">
+                            <h6>Optimized Flow</h6>
+                            <div id="shadow-content"></div>
+                        </div>
+                    </div>
+                    <button id="revealBtn" class="btn btn-outline-info w-100 mt-3">Reveal Optimized Schedule</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-lab" class="view-section d-none">
+            <div class="p-5 text-center border border-secondary rounded">
+                <h2 class="text-info">Behavioral Pattern Insights</h2>
+                <p class="lead">Analyzing routine consistency and time-opportunity gaps.</p>
+                <div class="badge bg-dark border border-info px-3 py-2">System Mode: Observation Only</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

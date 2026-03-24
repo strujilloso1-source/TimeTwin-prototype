@@ -1,0 +1,27 @@
+:root { --bg-black: #050505; --dark-card: #111111; --accent-info: #0dcaf0; }
+body { background-color: var(--bg-black); color: #f8f9fa; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+/* SIDEBAR */
+.sidebar { height: 100vh; background-color: #080808; position: fixed; border-right: 1px solid #222; z-index: 1000; }
+.nav-link { color: #666; padding: 18px 30px; font-size: 0.9rem; transition: 0.3s; border-left: 3px solid transparent; }
+.nav-link.active { color: var(--accent-info); background: linear-gradient(90deg, rgba(13, 202, 240, 0.1) 0%, transparent 100%); border-left: 3px solid var(--accent-info); }
+
+/* CALENDAR */
+.calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+.day-label { text-align: center; color: #444; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; }
+.cal-cell { background: #0a0a0a; border: 1px solid #222; height: 90px; padding: 12px; border-radius: 12px; text-align: right; transition: 0.3s; cursor: pointer; }
+.cal-cell:hover { border-color: var(--accent-info); transform: scale(1.02); }
+.active-day { border: 2px solid var(--accent-info); background: rgba(13, 202, 240, 0.05); }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; position: absolute; bottom: 12px; right: 12px; }
+
+/* DASHBOARD COMPONENTS */
+.shadow-stat-box { background: #0c0c0c; border: 1px solid #1a1a1a; border-radius: 18px; }
+.user-note { background: rgba(13, 202, 240, 0.04); padding: 12px; border-radius: 10px; border: 1px dashed rgba(13, 202, 240, 0.2); margin-top: 8px; font-style: italic; }
+.bg-dark-card { background: var(--dark-card); }
+
+/* ANIMATION */
+.shadow-item { opacity: 0; transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(15px); }
+.shadow-item.revealed { opacity: 1; transform: translateY(0); }
+
+.tracking-widest { letter-spacing: 0.15em; }
+.uppercase { text-transform: uppercase; }
